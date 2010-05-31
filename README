@@ -1,0 +1,14 @@
+What is this?
+Simple but powerful asterisk AMI monitor:
+    two threads: one for capturing AMI, other for processing it
+    possible to easily hook a callback to any desired AMI event (eg. "Up", newstate "Ringing"...)
+    Logs all received AMI to log/ folder.
+
+Currently it sets channel variable JACK_HOOK upon new channel creation (for leg B), so ports can be connected in one more way (dialplan, cli and now AMI).
+However, connecting the ports from AMI currently segfaults asterisk, bug report here:
+https://issues.asterisk.org/view.php?id=17425
+
+Hope you enjoy it and AMI processing will be much more simple because of this script :-)
+
+
+License: public domain.
